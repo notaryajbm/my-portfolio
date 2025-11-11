@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    /* catppuccin mocha */
+    --background: 240 21% 15%;
+    --foreground: 226 64% 88%;
+
+    --card: 240 23% 18%;
+    --card-foreground: 226 64% 88%;
+
+    --popover: 240 23% 18%;
+    --popover-foreground: 226 64% 88%;
+
+    --primary: 217 92% 76%;
+    --primary-foreground: 240 21% 15%;
+
+    --secondary: 316 72% 86%;
+    --secondary-foreground: 240 21% 15%;
+
+    --muted: 233 13% 41%;
+    --muted-foreground: 227 16% 66%;
+
+    --accent: 267 84% 81%;
+    --accent-foreground: 240 21% 15%;
+
+    --destructive: 343 81% 75%;
+    --destructive-foreground: 240 21% 15%;
+
+    --border: 237 16% 23%;
+    --input: 237 16% 23%;
+    --ring: 217 92% 76%;
+
+    --radius: 0.5rem;
+
+    /* catppuccin custom colors */
+    --mocha-rosewater: 10 56% 91%;
+    --mocha-gray: 228 14% 64%;
+    --mocha-flamingo: 0 59% 88%;
+    --mocha-pink: 316 72% 86%;
+    --mocha-mauve: 267 84% 81%;
+    --mocha-red: 343 81% 75%;
+    --mocha-maroon: 350 65% 71%;
+    --mocha-peach: 23 92% 75%;
+    --mocha-yellow: 41 88% 75%;
+    --mocha-green: 115 54% 76%;
+    --mocha-teal: 170 57% 73%;
+    --mocha-sky: 189 71% 73%;
+    --mocha-sapphire: 199 74% 69%;
+    --mocha-blue: 217 92% 76%;
+    --mocha-lavender: 236 100% 85%;
+
+    --mocha-text: 226 64% 88%;
+    --mocha-subtext1: 227 35% 80%;
+    --mocha-subtext0: 228 24% 72%;
+    --mocha-overlay2: 229 17% 64%;
+    --mocha-overlay1: 231 13% 49%;
+    --mocha-overlay0: 233 13% 41%;
+    --mocha-surface2: 236 14% 35%;
+    --mocha-surface1: 237 16% 29%;
+    --mocha-surface0: 240 20% 23%;
+    --mocha-base: 240 21% 15%;
+    --mocha-mantle: 240 21% 12%;
+    --mocha-crust: 240 23% 10%;
+
+    /* glow */
+    --glow-primary: 217 92% 76%;
+    --glow-secondary: 316 72% 86%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  ::selection {
+    @apply bg-primary/30;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--glow-primary) / 0.5);
+  }
+
+  .border-glow {
+    box-shadow: 0 0 10px hsl(var(--glow-primary) / 0.3);
+  }
+
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--card) / 0.6);
+  }
+
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+    .term-line {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .term-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.2em;
+    width: 2px;
+    background: hsl(var(--mocha-overlay1) / 0.8);
+    border-radius: 2px;
+  
+}
+}
