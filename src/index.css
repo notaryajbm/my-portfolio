@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* new theme: Nebula Pinewave */
+    /* rose pine! */
     --background: 249 24% 12%;
     --foreground: 245 50% 91%;
 
@@ -35,7 +35,7 @@
 
     --radius: 0.5rem;
 
-    /* new theme: Nebula Pinewave */
+        /* rose pine! */
     --mocha-rosewater: 10 56% 88%;
     --mocha-gray: 245 15% 70%;
     --mocha-flamingo: 343 60% 72%;
